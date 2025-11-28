@@ -4,7 +4,7 @@
 
 This Python script is part of a larger Data Engineering project (MovieLens ELT Pipeline). Its primary function is to enrich the MovieLens dataset by scraping the web to collect additional details for over **27,000 movies**.
 
-The extracted data (movie poster, budget, revenue, and original language) is crucial for providing valuable context and enhancing the overall dataset before loading into the data warehouse.
+The extracted data (movie poster, budget, revenue, and original language) is crucial for providing valuable context and enhancing the overall dataset before loading it into the data warehouse.
 
 ## 🛠️ Technologies Used
 
@@ -21,7 +21,7 @@ Before running the script, ensure you have the following:
 2.  **Zyte API Key:** A valid API key is required for proxy handling.
 3.  **Required Python Libraries:** You will need to install the following packages:
     ```bash
-    pip install requests beautifulsoup4
+    pip install requests beautifulsoup4 zyte-api
     ```
 
 ## ⚙️ Setup and Execution
@@ -33,7 +33,7 @@ Before running the script, ensure you have the following:
     ```
 
 2.  **Run the Scraper:**
-    Execute the main Python script. The script will:
+    Execute the `scraper_zyte` Python script. The script will:
     *   Iterate through the list of movies.
     *   Use the `requests` library with the Zyte API to fetch the required web pages.
     *   Use `BeautifulSoup` to parse the HTML and extract the enrichment data (poster, budget, revenue, original language).
